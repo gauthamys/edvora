@@ -9,3 +9,4 @@ datetime
 email_validator
 typing
 uvicorn
+gunicorn
