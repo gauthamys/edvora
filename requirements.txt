@@ -8,3 +8,4 @@ pydantic
 datetime
 email_validator
 typing
+uvicorn
