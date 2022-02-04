@@ -1,6 +1,6 @@
 fastapi
 fastapi-sessions
-jwt
+PyJWT
 uuid
 sqlalchemy
 passlib
