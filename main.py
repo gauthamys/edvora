@@ -39,7 +39,7 @@ async def create_user(user: _schemas.UserCreate, db: _orm.Session = _fastapi.Dep
 
     return await _services.create_token(user=user)
 
-@app.post("/api/create_session/")
+@app.post("/api/create_session")
 async def create_session(response: _fastapi.Response, token: Optional[str]=_fastapi.Query(None)):
 
     session = uuid4()
@@ -51,7 +51,7 @@ async def create_session(response: _fastapi.Response, token: Optional[str]=_fast
 
     return f"created session for {name}"
 
-@app.get("/api/whoami", dependencies=[_fastapi.Depends(cookie)])
+@app.get("/api/current_session", dependencies=[_fastapi.Depends(cookie)])
 async def whoami(session_data: SessionData = _fastapi.Depends(verifier)):
     return session_data
 

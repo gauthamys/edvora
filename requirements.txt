@@ -8,7 +8,7 @@ pydantic
 datetime
 email_validator
 typing
-uvicorn
+uvicorn[standard]
 gunicorn
 jinja2
 python-multipart
