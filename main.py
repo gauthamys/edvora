@@ -12,7 +12,7 @@ import sqlalchemy.orm as _orm
 
 import services as _services
 import schemas as _schemas
-import socket_util as _socket
+from socket_util import manager
 import models as _models
 from session import *
 
@@ -20,7 +20,6 @@ from session import *
 _JWT_SECRET = "edvora"
 
 app = _fastapi.FastAPI()
-manager = _socket.ConnectionManager()
 templates = Jinja2Templates(directory="templates")
 
 @app.get('/')

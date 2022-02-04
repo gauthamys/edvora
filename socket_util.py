@@ -23,3 +23,5 @@ class ConnectionManager:
     async def broadcast(self, data):
         for conn in self.active_conns:
             await conn.send_text(data)
+
+manager = ConnectionManager()
