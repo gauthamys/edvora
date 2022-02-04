@@ -1,7 +1,6 @@
 '''APP'''
 import os as _os
 
-import dotenv as _dotenv
 import jwt as _jwt
 from uuid import uuid4
 from typing import List, Optional
@@ -17,9 +16,8 @@ import socket_util as _socket
 import models as _models
 from session import *
 
-_dotenv.load_dotenv()
 
-_JWT_SECRET = _os.environ['JWT_SECRET']
+_JWT_SECRET = "edvora"
 
 app = _fastapi.FastAPI()
 manager = _socket.ConnectionManager()
