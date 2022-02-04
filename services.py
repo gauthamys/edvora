@@ -2,7 +2,6 @@
 from typing import Optional
 import os as _os
 
-import dotenv as _dotenv
 import jwt as _jwt
 import sqlalchemy.orm as _orm
 import passlib.hash as _hash
@@ -15,10 +14,7 @@ import database as _database
 import schemas as _schemas
 import models as _models
 
-
-_dotenv.load_dotenv()
-
-_JWT_SECRET = _os.environ['JWT_SECRET']
+_JWT_SECRET = "edvora"
 
 oauth2schema = _security.OAuth2PasswordBearer("api/token")
 
