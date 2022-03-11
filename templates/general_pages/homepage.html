@@ -1,0 +1,30 @@
+{% extends "shared/base.html" %}
+
+
+{% block title %} 
+  <title>API</title>
+{% endblock %} 
+
+{% block content %} 
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+#texta{
+  
+  margin-left: 30px;
+  margin-top: 15px;
+  
+  height: 500px;
+  width: 500px;
+
+}
+
+</style>
+
+<div>
+<h3 style="margin-left:30px;margin-top:30px; align-self: center;">Visit <a href='/docs'>/docs</a> or <a href="/redoc">/redoc</a> to test the api and know the endpoints</h3>
+<h4 style="margin-left:30px;margin-top:30px; align-self: center;">Feel free to use postman or any websocket testing client to test the websocket endpoint <a href='ws://edvo.herokuapp.com/api/ws'>ws://edvo.herokuapp.com/api/ws?token={token}</a> along with token query</h4>
+</div>
+{% endblock %}

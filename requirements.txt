@@ -1,0 +1,14 @@
+fastapi
+fastapi-sessions
+PyJWT
+uuid
+sqlalchemy
+passlib
+pydantic
+datetime
+email_validator
+typing
+uvicorn[standard]
+gunicorn
+jinja2
+python-multipart
